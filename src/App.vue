@@ -1,10 +1,21 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view />
+  <img
+    alt="Vue logo"
+    style="width: 200px; height: 200px;"
+    src="@/assets/FG.png"
+  />
+  <HelloWorld msg="Welcome to Android Password Store" />
 </template>
+
+<script>
+import HelloWorld from "@/components/HelloWorld.vue";
+
+export default {
+  components: {
+    HelloWorld
+  }
+};
+</script>
 
 <style lang="scss">
 #app {

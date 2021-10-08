@@ -1,4 +1,4 @@
-# aps_site
+# APS Website
 
 ## Project setup
 ```
