@@ -1,6 +1,8 @@
 <template>
-  <Navbar />
-  <HelloWorld msg="Welcome to Android Password Store" />
+  <div class="section1">
+    <Navbar />
+    <HelloWorld msg="Android Password Store" />
+  </div>
 </template>
 
 <script>

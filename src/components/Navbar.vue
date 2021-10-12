@@ -33,8 +33,8 @@
   }
 
   .logo {
-    height: 62px;
-    width: 62px;
+    height: 82px;
+    width: 82px;
   }
 
   .btnContainer {
