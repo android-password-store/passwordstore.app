@@ -10,6 +10,13 @@
 			</div>
 			<div class="buttonWrapper">
 				<a
+					class="button"
+					href="https://docs.passwordstore.app/"
+					target="_blank"
+					rel="noopener noreferrer"
+					>Documentation</a
+				>
+				<a
 					v-if="stargazers"
 					class="button"
 					href="https://github.com/android-password-store/Android-Password-Store"
@@ -25,13 +32,6 @@
 					rel="noopener noreferrer"
 					>Backers: {{ backers }}
 				</a>
-				<a
-					class="button"
-					href="https://docs.passwordstore.app/"
-					target="_blank"
-					rel="noopener noreferrer"
-					>Documentation</a
-				>
 			</div>
 		</div>
 		<img class="mockup" alt="aps mockup" src="@/assets/Screen.png" />
