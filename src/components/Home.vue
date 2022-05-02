@@ -10,27 +10,33 @@
       </div>
       <div class="buttonWrapper">
         <a
-          class="button"
           href="https://docs.passwordstore.app/"
           target="_blank"
           rel="noopener noreferrer"
-          >Documentation</a
-        >
+          ><img
+            alt="Password Store docs"
+            height="30px"
+            src="https://img.shields.io/static/v1?label=docs&message=passwordstore.app&color=003e5b&logoColor=003e5b&style=for-the-badge"
+        /></a>
         <a
-          v-if="stargazers"
-          class="button"
-          href="https://github.com/android-password-store/Android-Password-Store"
+          href="https://github.com/android-password-store/Android-Password-Store/stargazers"
           target="_blank"
           rel="noopener noreferrer"
-          >Stars: {{ stargazers }}
-        </a>
+          ><img
+            alt="GitHub Stars"
+            height="30px"
+            src="https://img.shields.io/github/stars/android-password-store/Android-Password-Store?color=003e5b&logoColor=003e5b&style=for-the-badge"
+        /></a>
         <a
-          v-if="backers"
-          class="button"
           href="https://opencollective.com/Android-Password-Store"
           target="_blank"
           rel="noopener noreferrer"
-          >Backers: {{ backers }}
+        >
+          <img
+            alt="Open Collective backers"
+            height="30px"
+            src="https://img.shields.io/opencollective/backers/android-password-store?color=003e5b&style=for-the-badge"
+          />
         </a>
       </div>
     </div>
@@ -43,46 +49,6 @@ export default {
   name: "Home",
   props: {
     msg: String,
-  },
-  data() {
-    return {
-      stargazers: "",
-      backers: "",
-    };
-  },
-  methods: {
-    async fetchAPIData() {
-      var myHeaders = new Headers();
-      const accessToken = process.env.VUE_APP_GITHUB_ACCESS_TOKEN;
-      if (accessToken != null) {
-        myHeaders.append("Authorization", `Bearer ${accessToken}`);
-      }
-
-      var requestOptions = {
-        method: "GET",
-        headers: myHeaders,
-        redirect: "follow",
-      };
-      const data = await Promise.all([
-        fetch(
-          `https://api.github.com/repos/android-password-store/Android-Password-Store`,
-          requestOptions
-        ).then((res) => (res.ok && res.json()) || Promise.reject(res)),
-        fetch(`https://opencollective.com/android-password-store.json`)
-          .then((res) => (res.ok && res.json()) || Promise.reject(res))
-          .catch((e) => console.log(` Error occurred during API Call ${e}`)),
-      ]);
-      const kFormatter = (num) => {
-        return Math.abs(num) > 999
-          ? Math.sign(num) * (Math.abs(num) / 1000).toFixed(1) + "k"
-          : Math.sign(num) * Math.abs(num);
-      };
-      this.stargazers = kFormatter(data[0].stargazers_count);
-      this.backers = kFormatter(data[1].backersCount);
-    },
-  },
-  created() {
-    this.fetchAPIData();
   },
 };
 </script>
@@ -99,6 +65,7 @@ export default {
 
 .mockup {
   height: 300px;
+  min-width: 142px;
   border-radius: 12px;
   border: 4px solid rgb(87, 84, 84);
   box-shadow: 10px -4px 80px 20px rgba(67, 67, 67, 0.14);
@@ -131,23 +98,6 @@ export default {
   flex-direction: row;
   justify-content: center;
   gap: 2rem;
-}
-.button {
-  margin-top: 2rem;
-  padding: 8px;
-  font-size: 1.6rem;
-  background-color: #3c5cce;
-  color: #fff;
-  border-radius: 6px;
-}
-.button a {
-  color: #fff;
-}
-.button:hover {
-  transition: box-shadow 0.5s ease-in;
-  box-shadow: 1px 17px 41px 1px rgba(112, 144, 176, 0.29);
-  -webkit-box-shadow: 1px 17px 41px 1px rgba(112, 144, 176, 0.29);
-  -moz-box-shadow: 1px 17px 41px 1px rgba(112, 144, 176, 0.29);
 }
 @media (max-width: 767px) {
   .main {
