@@ -53,10 +53,10 @@ export default {
   methods: {
     async fetchAPIData() {
       var myHeaders = new Headers();
-      myHeaders.append(
-        "Authorization",
-        `Bearer ${process.env.VUE_APP_GITHUB_ACCESS_TOKEN}`
-      );
+      const accessToken = process.env.VUE_APP_GITHUB_ACCESS_TOKEN;
+      if (accessToken != null) {
+        myHeaders.append("Authorization", `Bearer ${accessToken}`);
+      }
 
       var requestOptions = {
         method: "GET",
