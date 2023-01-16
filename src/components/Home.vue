@@ -4,8 +4,7 @@
       <div class="about">
         <h1 class="title">{{ msg }}</h1>
         <p class="description">
-          Android client for pass. Password Store aims to be a feature-complete
-          client and implements most of its capabilities.
+          Password Store aims to be a feature-complete client for <a href="https://passwordstore.org/">pass</a> and implements most of its capabilities.
         </p>
       </div>
       <div class="badgeWrapper">
@@ -27,9 +26,13 @@
   <section class="main">
     <div class="wrapper">
       <div class="about">
-        <h1 class="subtitle">Documentation</h1>
+        <h1 class="subtitle">Community</h1>
         <p class="description">
-          We're in the process of rewriting our documentation from scratch, and the work-in-progress state can be seen <a href="https://docs.passwordstore.app" target="_blank" rel="noopener noreferrer">here</a>. See the <a href="https://github.com/android-password-store/Android-Password-Store/wiki/" target="_blank" rel="noopener noreferrer">wiki</a> for the old documentation.
+          Ways to get in touch:
+          <br /><br />
+          <a href="https://github.com/android-password-store/Android-Password-Store/issues">Github issues</a>: Use it if you have a bug report, or you want to submit a feature request.
+          <br /><br />
+          <a href="https://github.com/android-password-store/Android-Password-Store/discussions">GitHub Discussions</a>: Use it if you do not understand something, or want to discuss a feature request in more detail with all community members before pitching it to maintainers.
         </p>
       </div>
     </div>
@@ -46,20 +49,6 @@
           Wanna test development builds to find bugs and offer feedback? Read the <a href="https://docs.passwordstore.app/docs/Users/release-channels" target="_blank" rel="noopener noreferrer">release channels</a> documentation to get access!
           
           Code contributions? <a href="https://github.com/android-password-store/Android-Password-Store/blob/develop/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer">Here</a> you are welcomed!
-        </p>
-      </div>
-    </div>
-  </section>
-  <section class="main">
-    <div class="wrapper">
-      <div class="about">
-        <h1 class="subtitle">Community</h1>
-        <p class="description">
-          Ways to get in touch:
-          <br /><br />
-          <a href="https://github.com/android-password-store/Android-Password-Store/issues">Github issues</a>: Use it if you have a bug report, or you want to submit a feature request.
-          <br /><br />
-          <a href="https://github.com/android-password-store/Android-Password-Store/discussions">GitHub Discussions</a>: Use it if you do not understand something, or want to discuss a feature request in more detail with all community members before pitching it to maintainers.
         </p>
       </div>
     </div>
